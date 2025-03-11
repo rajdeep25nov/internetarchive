@@ -71,7 +71,7 @@ Wayback Machine for archiving URLs.
 graph TD
     A[Start] --> B[Read OCR Text from sample_ocr.txt]
     B --> C[Extract URLs using Regex]
-    C --> D[Clean URLs (Remove extra spaces, ensure proper domain suffixes)]
+    C --> D[Clean URLs]
     D --> E[Save Extracted URLs to urls.json]
     E --> F[Validate URLs using HTTP HEAD Requests]
     F --> G{Is URL Valid?}
@@ -84,6 +84,7 @@ graph TD
     L --> M[Highlight URLs and Make Them Clickable in Book Reader]
     M --> N[Display Book Reader Interface with Clickable URLs]
     N --> O[End]
+
 
 
 
