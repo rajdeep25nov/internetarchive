@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Reader googlesoc Internet Archive (Universal Access to All Knowledge)</title>
+    <style>
+        .highlight {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .invalid {
+            color: red;  
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book Reader</h1>
+    <p id="book-text">
+        This is a sample book page by Rajdeep for GogleSoc. Visit 
+        <span class="highlight" data-url="http://example.com">http://example.com</span> 
+        for more information. Another URL: 
+        <span class="highlight" data-url="https://rajdeepjaiswal.org">https://rajdeepjaiswal.org</span>. 
+        Invalid URL: 
+        <span class="invalid">http://googlesoc.url</span>.
+    </p>
+
+    <script>
+   
+        document.querySelectorAll(".highlight").forEach(link => {
+            link.addEventListener("click", () => {
+                const url = link.getAttribute("data-url");
+                alert(`Redirecting to: ${url}`);
+                window.open(url, "_blank");
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!-- modify as per your requirment like I have edited it multiples time before and after testing each code blocks-->
