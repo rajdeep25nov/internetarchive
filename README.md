@@ -67,11 +67,11 @@ Wayback Machine for archiving URLs.
 
 
 
-Diagram - 
+```mermaid
 graph TD
     A[Start] --> B[Read OCR Text from sample_ocr.txt]
     B --> C[Extract URLs using Regex]
-    C --> D[Clean URLs]
+    C --> D[Clean URLs (Remove extra spaces, ensure proper domain suffixes)]
     D --> E[Save Extracted URLs to urls.json]
     E --> F[Validate URLs using HTTP HEAD Requests]
     F --> G{Is URL Valid?}
