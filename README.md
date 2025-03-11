@@ -63,6 +63,30 @@ Internet Archive for providing access to digitized books.
 
 Wayback Machine for archiving URLs.
 
+
+
+
+
+Diagram - 
+graph TD
+    A[Start] --> B[Read OCR Text from sample_ocr.txt]
+    B --> C[Extract URLs using Regex]
+    C --> D[Clean URLs]
+    D --> E[Save Extracted URLs to urls.json]
+    E --> F[Validate URLs using HTTP HEAD Requests]
+    F --> G{Is URL Valid?}
+    G -->|Yes| H[Archive URL using Wayback Machine Save Page Now API]
+    G -->|No| I[Mark URL as Invalid in urls.json]
+    H --> J[Log Archived URL with Wayback Link in urls.json]
+    I --> K[Log Invalid URL in urls.json]
+    J --> L[Fetch OCR Text for Each Page using Internet Archive API]
+    K --> L
+    L --> M[Highlight URLs and Make Them Clickable in Book Reader]
+    M --> N[Display Book Reader Interface with Clickable URLs]
+    N --> O[End]
+
+
+
 Contact
 For questions or feedback, feel free to reach out:
 
