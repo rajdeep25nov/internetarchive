@@ -73,5 +73,4 @@ Email: rajdeepjaiswal25nov@gmail.com
 
 
 
-```markdown
-   ![Workflow Diagram](image/img.png)
+```markdown ![Workflow Diagram](image/img.png)
