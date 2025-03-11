@@ -43,15 +43,15 @@ def validate_urls(urls):
     return validated_urls
 
 if __name__ == "__main__":
-    # Read sample OCR text
+    # Readsample OCR text
     with open("sample_ocr.txt", "r") as f:
         text = f.read()
 
-    # Extract URLs
+    # Extracting URLs
     urls = extracturls(text)
     print("Extracted URLs:", urls)
 
-    # Validate URLs
+    # Validate  theURLs
     validated_urls = validate_urls(urls)
     print("Validated URLs:", validated_urls)
 
@@ -80,29 +80,24 @@ if __name__ == "__main__":
     with open("sample_ocr.txt", "r") as f:
         text = f.read()
 
-    # Extract URLs
+    # Extract the URLs
     urls = extracturls(text)
     print("Extracted URLs:", urls)
 
-    # Validate URLs
+    # Validate theURLs
     validated_urls = validate_urls(urls)
     print("Validated URLs:", validated_urls)
 
-    # Archive URLs
+    # Archive the URLs
     archived_urls = archive_urls(validated_urls)
     print("Archived URLs:", archived_urls)
 
     # Save URLs to JSON
     savetheurls(archived_urls)
 
-
-
-
-import re
-import json
-
+# here starts for the fixing space & extraction 
 def clean_url(url):
-    # Removing he extra spaces while preserving domain suffixes
+    # Removing he extra spaces and also preserving domain suffixes
     cleaned_url = re.sub(r'\s+', '', url)  # Remove all spaces
     
     # makin sure the URL starts with http:// or https://
@@ -146,3 +141,6 @@ def book_reader():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+  #  modify as per your requirment like I have edited it multiples time before and after testing each code blocks

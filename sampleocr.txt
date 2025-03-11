@@ -1,2 +1,7 @@
-This is a sample book page. Visit http:// example .com for more information.
+#for reference please remove addition comnts
+
+This is a sample book page by Rajdeep for GogleSoc. Visit  http:// example .com for more information.
 Another URL: https:// rajdeepjaiswal .org. Invalid URL: http:// googlesoc .url.
+
+This is a sample book page by Rajdeep for GogleSoc. Visit  Visit https://example.com for more information.
+Another URL: http://archive.org. Invalid URL: http://invalid.url.
